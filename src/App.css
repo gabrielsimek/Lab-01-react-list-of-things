@@ -1,8 +1,8 @@
 .App {
+  height: 100vh;
   display: grid;
-}
-
-/* TODO: remove **/
-.temp-images {
-  height: 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 25px;
+  align-items: center;
+  background-color: pink;
 }
