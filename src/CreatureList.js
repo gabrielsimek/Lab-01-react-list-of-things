@@ -9,8 +9,9 @@ class CreatureList extends Component {
     const creatures = this.props.creatures;
     return (
       <ul className="CreatureList">
-        {creatures.map(creature => {
-          return <CreatureItem key={creature.title} creature={creature} />;
+        {creatures.map((creature, index) => {
+          
+          return <CreatureItem key={index} creature={creature} />;
         })}
         
 
