@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreatureItem from './CreatureItem';
-import './CreatureItem.css';
+import './CreatureList.css';
 
 class CreatureList extends Component {
   render() {
