@@ -3,10 +3,16 @@ import CreatureItem from './CreatureItem';
 import './CreatureList.css';
 
 class CreatureList extends Component {
+    
+
   render() {
+    const creatures = this.props.creatures;
     return (
       <ul className="CreatureList">
-        <CreatureItem/>
+        {creatures.map(creature => {
+          return <CreatureItem key={creature.title} creature={creature} />;
+        })}
+        
 
       </ul>
 
