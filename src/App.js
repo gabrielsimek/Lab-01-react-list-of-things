@@ -13,7 +13,7 @@ class App extends Component {
         <Header/>
 
         <main>
-        A list
+        List goes here
         </main>
         <Footer/>
   
