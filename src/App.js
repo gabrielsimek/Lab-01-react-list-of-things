@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import CreatureList from './CreatureList';
+import CreatureSearch from './CreatureSearch';
 import './App.css';
 import creatures from './creatures.js';
 
@@ -13,6 +14,8 @@ class App extends Component {
     return (
       <div className="App"> 
         <Header/>
+
+        <CreatureSearch/>
 
         <main>
           <CreatureList creatures={creatures} />;
