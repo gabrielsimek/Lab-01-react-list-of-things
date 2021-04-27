@@ -19,6 +19,14 @@ export default class CreatureSearch extends Component {
     e.preventDefault();
     this.props.onSearch(this.state);
   }
+
+  componentDidUpdate(prevProp, prevState) {
+    if (prevState !== this.state) {
+      this.props.onSearch(this.state);
+    }
+  }
+
+  
   
   
   render() {
@@ -40,7 +48,7 @@ export default class CreatureSearch extends Component {
           value={sortField}
           onChange={this.handleSortChange}
         >
-          <option value="">Sort All</option>
+          <option value="">All</option>
 
           <option value="title">By name</option>
 

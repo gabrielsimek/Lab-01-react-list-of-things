@@ -15,12 +15,14 @@ class App extends Component {
   }
   handleSearch = ({ nameSearch, sortField }) => {
     const aRegex = new RegExp(nameSearch, 'i');
+    console.log(aRegex);
 
     const searchedData = creaturesData.filter((creature) => {
       return creature.title.match(aRegex);
 
     })
     .sort((a, b) => {
+      console.log(a[sortField], b[sortField]);
       if (a[sortField] < b[sortField]) return -1;
       if (a[sortField] > b[sortField]) return 1;
       return 0;
