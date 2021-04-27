@@ -7,7 +7,7 @@ import CreatureSearch from './CreatureSearch';
 import './App.css';
 import creatures from './creatures.js';
 
-console.log(creatures);
+
 class App extends Component {
 
   render() {
