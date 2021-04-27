@@ -10,7 +10,7 @@ export default class CreatureSearch extends Component {
         <input/>
 
         <select>
-          <option value="">Sort</option>
+          <option value="">Sort All</option>
 
           <option value="name">By name</option>
 
