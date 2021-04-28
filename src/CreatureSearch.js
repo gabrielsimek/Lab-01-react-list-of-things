@@ -72,7 +72,7 @@ export default class CreatureSearch extends Component {
           value={hornsFilter}
           onChange={this.handleHornsSortChange}
         >
-          <option value="allHorns">all horns</option>
+          <option value="">all horns</option>
           {horns.map((horn) => {
             return <option 
               value={horn}
@@ -88,7 +88,7 @@ export default class CreatureSearch extends Component {
           value={keywordFilter}
           onChange={this.handleKeywordsSortChange}
         >
-          <option value="allKeywords">all keywords</option>
+          <option value="">all keywords</option>
           {keywords.map((keyword) => {
             return <option 
               value={keyword}
