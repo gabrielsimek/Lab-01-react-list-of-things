@@ -29,11 +29,11 @@ class App extends Component {
 
     })
     .filter(creature => {
-      //why is it getting stuck in this filter?
+      //initial value of first option all needs to be blank!
       return !hornsFilter || creature.horns === Number(hornsFilter);
     })
     .filter(creature => {
-      //why is it getting stuck in this filter?
+      
       return !keywordFilter || creature.keyword === keywordFilter;
     })
     .sort((a, b) => {
