@@ -7,22 +7,34 @@ import CreatureList from './CreatureList';
 import CreatureSearch from './CreatureSearch';
 import './App.css';
 import creaturesData from './creatures.js';
+import request from 'superagent';
 //looks like this is the best way to return an array with unique value but how exactly does set work....
 const creatureHorns = [...new Set(creaturesData.map(creature => creature.horns))];
 
 const creatureKeywords = [...new Set(creaturesData.map(creature => creature.keyword))];
 
+const CREATURES_API = 'https://tranquil-plateau-72148.herokuapp.com/api/creatures';
+
 
 
 class App extends Component {
   state = {
-    creatures: creaturesData
+    creatures: []
   }
+
+async componentDidMount() {
+  const response = await request.get(CREATURES_API);
+  this.setState({ creatures: response.body });
+  
+}
+
+
+
   handleSearch = ({ nameSearch, sortField, hornsFilter, keywordFilter }) => {
+    //flow of data.. 
     const aRegex = new RegExp(nameSearch, 'i');
-    // console.log(aRegex);
-    // console.log(hornsFilter);
-    // console.log(this.state);
+  
+  
 
     const searchedData = creaturesData.filter((creature) => {
       return creature.title.match(aRegex);
